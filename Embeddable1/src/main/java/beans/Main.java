@@ -10,6 +10,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         Configuration cfg=new Configuration();
+        cfg.configure("Hibernate.cfg.xml");
         SessionFactory sf=cfg.buildSessionFactory();
         Session s= sf.openSession();
         Transaction ts=s.beginTransaction();
